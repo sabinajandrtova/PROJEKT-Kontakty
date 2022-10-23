@@ -5,6 +5,7 @@ html { box-sizing: border-box; }
 body {
 	font-family: sans-serif;
 	font-size: 14px;
+	
 }
 
 /* ---------------------------------------------------- */
@@ -15,3 +16,72 @@ Mobil   0 - 539px
 Tablet  540px - 959px (čti jako 540px a víc)
 PC      960px a víc
 */
+
+h1 {
+	text-align: center;
+}
+
+.foto {
+	border-radius: 50%;
+	max-width: 100%;
+	height: auto;
+}
+
+.vizitka {
+	border-radius: 5px;
+	border: 1px solid grey;
+	margin-bottom: 20px;
+	padding: 20px;
+	text-align: center;
+}
+
+@media screen and (min-width: 540px) {
+	.kontejner {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	.vizitka {
+		flex: 0 0 calc((100% - 20px) / 2);
+		display: flex;
+		justify-content: space-between;
+		margin: 0;
+	}
+
+	.leva {
+		flex: 1 1 20%;
+		align-items: baseline;
+	}
+
+.foto {
+	max-width: 75px;
+	padding-top: 10px;
+}
+
+	.prava {
+		flex: 1 1 80%;
+		padding-left: 15px;
+		text-align: left;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.vizitka {
+		flex: 0 0 calc(25% - (40px / 4));
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+		
+	}
+
+	.prava {
+		padding: 0;
+		text-align: center;
+	}
+
+	.foto {
+		max-width: 100%;
+		height: auto;
+	}
+}
